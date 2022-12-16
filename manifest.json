@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Quick Image Uploader",
+  "version": "0.1.0",
+  "action": {
+    "default_icon": {
+      "16": "assets/quick-image-uploader-icon.png",
+      "24": "assets/quick-image-uploader-icon.png",
+      "32": "assets/quick-image-uploader-icon.png"
+    },
+    "default_title": "Quick Image Uploader",
+    "default_popup": "popup.html"
+  },
+  "description": "Quick Image Uploader is a browser extension that allows you to easily upload images by pasting them directly into a file input field. Save time and storage space by avoiding the need to save images to your system before uploading them. Compatible with Firefox, Chrome, and Opera GX. ",
+  "author": "Magomed Alimkhanov",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["contentScript.js"]
+    }
+  ],
+  "permissions": ["storage"]
+}
