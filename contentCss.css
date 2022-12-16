@@ -1,0 +1,4 @@
+.hoverForSelection {
+  outline: solid 2px red;
+  background-color: green;
+}
